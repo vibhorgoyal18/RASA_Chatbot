@@ -1,6 +1,11 @@
-## Generated Story 964254582591831276
+## Generated Story 1
 * greet
     - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "chennnai"}
+    - slot{"location": "chennnai"}
+    - action_chklocation
 * restaurant_search{"location": "chennai"}
     - slot{"location": "chennai"}
     - verify_location
@@ -26,18 +31,19 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story 4708982396586626192
+## Generated Story 2
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -57,12 +63,13 @@
     - utter_goodbye
     - action_restart
 
-## Generated Story -4665169466705197949
+## Generated Story -3
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -88,13 +95,14 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story -5043122488344133708
+## Generated Story -4
 * greet{"location": "hola"}
     - slot{"location": "hola"}
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -117,12 +125,13 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 618260811243109624
+## Generated Story 5
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -144,7 +153,7 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 1718058272252383512
+## Generated Story 6
 * greet
     - utter_greet
 * restaurant_search{"location": "rishikesh"}
@@ -155,6 +164,7 @@
     - utter_ask_location
 * restaurant_search{"location": "allahabad"}
     - slot{"location": "allahabad"}
+    - action_chklocation
     - verify_location
     - slot{"location": "allahabad"}
     - slot{"location_ok": true}
@@ -186,7 +196,7 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 5083914778265065896 (SS)
+## Generated Story 7
 * greet
     - utter_greet
 * restaurant_search{"location": "rishikesh"}
@@ -197,6 +207,7 @@
     - utter_ask_location
 * restaurant_search{"location": "allahabad"}
     - slot{"location": "allahabad"}
+    - action_chklocation
     - verify_location
     - slot{"location": "allahabad"}
     - slot{"location_ok": true}
@@ -219,18 +230,19 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "srikanth.vs84@gmail.com"}
-    - slot{"emailid": "srikanth.vs84@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story -734929165878046893 (SS)
+## Generated Story -8
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "mumbai"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "mumbai"}
+    - action_chklocation
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -253,7 +265,7 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 306586164453885916
+## Generated Story 9
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "north indian"}
@@ -264,6 +276,7 @@
     - utter_ask_location
 * restaurant_search{"location": "coimbatore"}
     - slot{"location": "coimbatore"}
+    - action_chklocation
     - verify_location
     - slot{"location": "coimbatore"}
     - slot{"location_ok": true}
@@ -280,19 +293,20 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryancodify@gmail.com"}
-    - slot{"emailid": "aryancodify@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story -2497440363954761105 (SS)
+## Generated Story -10
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "Kochi"}
     - slot{"location": "Kochi"}
+    - action_chklocation
     - verify_location
     - slot{"location": "Kochi"}
     - slot{"location_ok": true}
@@ -315,20 +329,21 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "srikanth.vs84@gmail.com"}
-    - slot{"emailid": "srikanth.vs84@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 * goodbye
     - utter_goodbye
 	- action_restart
 
-## Generated Story -531731183292093066 (SS)
+## Generated Story -11
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "majuli"}
     - slot{"location": "majuli"}
+    - action_chklocation
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -365,7 +380,7 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story -6868886679115127069
+## Generated Story -12
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "mexican", "location": "chennai", "budgetmin": "300", "budgetmax": "700"}
@@ -373,6 +388,7 @@
     - slot{"budgetmin": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "chennai"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chennai"}
     - slot{"location_ok": true}
@@ -393,19 +409,20 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 	
-## Generated Story 475841212046557654
+## Generated Story 13
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "lanka"}
     - slot{"location": "lanka"}
+    - action_chklocation
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -449,7 +466,7 @@
     - utter_goodbye
 	- action_restart
 	
-## Generated Story 6145797985903623523
+## Generated Story 14
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "american", "budgetmin": "300", "budgetmax": "700"}
@@ -459,6 +476,7 @@
     - utter_ask_location
 * restaurant_search{"location": "jaipur"}
     - slot{"location": "jaipur"}
+    - action_chklocation
     - verify_location
     - slot{"location": "jaipur"}
     - slot{"location_ok": true}
@@ -475,17 +493,18 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 	- action_restart
 	
-## Generated Story -5687567762096400471
+## Generated Story -15
 * greet
     - utter_greet
 * restaurant_search{"location": "raipur", "budgetmax": "300"}
     - slot{"budgetmax": "300"}
     - slot{"location": "raipur"}
+    - action_chklocation
     - verify_location
     - slot{"location": "raipur"}
     - slot{"location_ok": true}
@@ -505,17 +524,18 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story -6479006044568222703
+## Generated Story -16
 * greet
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_chklocation
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -544,19 +564,20 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story -2118681346680373904
+## Generated Story -17
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "mumbai"}
     - slot{"location": "mumbai"}
+    - action_chklocation
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -587,13 +608,14 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 318010925000507245
+## Generated Story 18
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "mumbai"}
     - slot{"location": "mumbai"}
+    - action_chklocation
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -635,18 +657,19 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 	- action_restart
 
-## Generated Story 9173743736444141906
+## Generated Story 19
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_chklocation
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -676,12 +699,12 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 	- action_restart
 
-## Generated Story -4894982680816150664
+## Generated Story -20
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "mexican", "location": "delhi", "budgetmin": "300", "budgetmax": "800"}
@@ -689,6 +712,7 @@
     - slot{"budgetmin": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "delhi"}
+    - action_chklocation
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -705,18 +729,19 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "euphoric.aakash@gmail.com"}
-    - slot{"emailid": "euphoric.aakash@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 	- action_restart
 
-## Generated Story -8039304074282048580
+## Generated Story -21
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "ajmer"}
     - slot{"location": "ajmer"}
+    - action_chklocation
     - verify_location
     - slot{"location": "ajmer"}
     - slot{"location_ok": true}
@@ -739,13 +764,14 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story -1506266381209530864
+## Generated Story -22
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "mexican", "location": "ajmer", "budgetmax": "300"}
     - slot{"budgetmax": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "ajmer"}
+    - action_chklocation
     - verify_location
     - slot{"location": "ajmer"}
     - slot{"location_ok": true}
@@ -766,13 +792,14 @@
     - utter_goodbye
 	- action_restart
     
-## Generated Story 7250327259440289631
+## Generated Story 23
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "chandigarh"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -795,18 +822,19 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryancodify@gmail.com"}
-    - slot{"emailid": "aryancodify@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story 6590940324926527851
+## Generated Story 24
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -827,17 +855,18 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryancodify@gmail.com"}
-    - slot{"emailid": "aryancodify@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 	- action_restart
 
-## Generated Story 3200734634823395562
+## Generated Story 25
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "north indian"}
     - slot{"cuisine": "north indian"}
+    - action_chklocation
     - verify_cuisine
     - slot{"cuisine": "north indian"}
     - slot{"cuisine_ok": true}
@@ -871,14 +900,14 @@
     - slot{"location": "ranchi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
-* send_mail{"emailid": "aryansinghjaswal@gmail.com"}
-    - slot{"emailid": "aryansinghjaswal@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 * goodbye
     - utter_goodbye
 	- action_restart
 
-## Generated Story -3119872537346433768
+## Generated Story -26
 * restaurant_search{"cuisine": "american"}
     - slot{"cuisine": "american"}
     - verify_cuisine
@@ -887,6 +916,7 @@
     - utter_ask_location
 * restaurant_search{"location": "dehradun"}
     - slot{"location": "dehradun"}
+    - action_chklocation
     - verify_location
     - slot{"location": "dehradun"}
     - slot{"location_ok": true}
@@ -901,19 +931,20 @@
     - slot{"location": "dehradun"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
-* send_mail{"emailid": "aryansinghjaswal@gmail.com"}
-    - slot{"emailid": "aryansinghjaswal@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 * goodbye
     - utter_goodbye
 	- action_restart
 
-## Generated Story -2747416429319312118
+## Generated Story -27
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "mughlai", "location": "asansol"}
     - slot{"cuisine": "mughlai"}
     - slot{"location": "asansol"}
+    - action_chklocation
     - verify_location
     - slot{"location": "asansol"}
     - slot{"location_ok": true}
@@ -960,19 +991,21 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 5693031377652531498
+## Generated Story 28
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "bhubhaneshwar"}
     - slot{"location": "bhubhaneshwar"}
+    - action_chklocation
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
     - utter_ask_location
 * restaurant_search{"location": "amravati"}
     - slot{"location": "amravati"}
+    - action_chklocation
     - verify_location
     - slot{"location": "amravati"}
     - slot{"location_ok": true}
@@ -995,20 +1028,21 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryansinghjaswal@gmail.com"}
-    - slot{"emailid": "aryansinghjaswal@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
 * thankyou
     - utter_goodbye
 	- action_restart
 	
-## Generated Story 8437935424406063230
+## Generated Story 29
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "chennai"}
     - slot{"location": "chennai"}
+    - action_chklocation
     - verify_location
     - slot{"location": "chennai"}
     - slot{"location_ok": true}
@@ -1033,7 +1067,7 @@
     - utter_goodbye
     - action_restart
 
-## Generated Story -5399400691021449854
+## Generated Story -30
 * 
 * greet
     - utter_greet
@@ -1046,6 +1080,7 @@
 * 
 * restaurant_search{"location": "warangal"}
     - slot{"location": "warangal"}
+    - action_chklocation
     - verify_location
     - slot{"location": "warangal"}
     - slot{"location_ok": true}
@@ -1064,11 +1099,12 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story 5176427587494693005
+## Generated Story 31
 * greet
     - utter_greet
 * restaurant_search{"location": "colombo"}
     - slot{"location": "colombo"}
+    - action_chklocation
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -1105,11 +1141,12 @@
     - utter_goodbye
 	- action_restart
 
-## Generated Story -4988396269851949806
+## Generated Story -32
 * greet
     - utter_greet
 * restaurant_search{"location": "Hubli-Dharwad"}
     - slot{"location": "Hubli-Dharwad"}
+    - action_chklocation
     - verify_location
     - slot{"location": "Hubli-Dharwad"}
     - slot{"location_ok": true}
@@ -1132,12 +1169,13 @@
 * 
 	- action_restart
 
-## Generated Story -1237650150885828498
+## Generated Story -33
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "mexican", "location": "Hubli-Dharwad"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "Hubli-Dharwad"}
+    - action_chklocation
     - verify_location
     - slot{"location": "Hubli-Dharwad"}
     - slot{"location_ok": true}
@@ -1157,11 +1195,12 @@
 * goodbye
 	- action_restart
 
-## Generated Story -5550085684907924190
+## Generated Story -34
 * greet
     - utter_greet
 * restaurant_search{"location": "guwahati"}
     - slot{"location": "guwahati"}
+    - action_chklocation
     - verify_location
     - slot{"location": "guwahati"}
     - slot{"location_ok": true}
@@ -1184,8 +1223,8 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "srikanth.vs84@gmail.com"}
-    - slot{"emailid": "srikanth.vs84@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com
     - action_send_email
     - utter_goodbye
 * goodbye
