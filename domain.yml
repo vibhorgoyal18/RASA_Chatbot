@@ -1,37 +1,111 @@
+actions:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_ask_email
+- utter_ask_emailid
+- utter_no_results_found
+- utter_email_sent
+- action_chklocation
+- verify_cuisine
+- verify_location
+- verify_budget
+- action_restaurant
+- action_send_email
+- actions.ActionSearchRestaurants
+- actions.VerifyLocation
+- actions.ActionSendEmail
+- actions.VerifyBudget
+- actions.VerifyCuisine
+- actions.ActionCheckLocation
 intents:
-- affirm
-- restaurant_search
 - greet
+- affirm
+- deny
 - goodbye
-- stop
+- thankyou
+- restaurant_search
+- send_mail
+- dont_send_email
 entities:
-- cuisine
 - location
-- price
-- people
+- cuisine
+- budgetmin
+- budgetmax
+- emailid
 slots:
+  budget_ok:
+    type: bool
+  budgetmax:
+    initial_value: 10000.0
+    max_value: 1.0
+    min_value: 0.0
+    type: float
+  budgetmin:
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: 0.0
+    type: float
   cuisine:
+    type: text
+  cuisine_ok:
+    initial_value: false
+    type: bool
+  emailid:
     type: text
   location:
     type: text
-templates:
+  location_ok:
+    type: text
+  restaurant_exist:
+    initial_value: false
+    type: bool
+responses:
+  utter_ask_budget:
+  - buttons:
+    - payload: /restaurant_search{"budgetmin":"0","budgetmax":"300"}
+      title: Less than Rs. 300
+    - payload: /restaurant_search{"budgetmin":"300","budgetmax":"700"}
+      title: Rs. 300 to 700
+    - payload: /restaurant_search{"budgetmin":"700","budgetmax":"10000"}
+      title: More than 700
+    text: What price range are you looking for?
   utter_ask_cuisine:
   - buttons:
     - payload: Chinese
       title: Chinese
+    - payload: Mexican
+      title: Mexican
     - payload: Italian
       title: Italian
+    - payload: American
+      title: American
     - payload: South Indian
       title: South Indian
     - payload: North Indian
       title: North Indian
     text: what kind of cuisine would you like?
+  utter_ask_email:
+  - text: Do you want a list of top 10 restaurants in your email?
+  - buttons:
+    - payload: /send_mail
+      title: Yes
+    - payload: /dont_send_email
+      title: No
+    text: Should I send you details of all the restaurants on email?
+  utter_ask_emailid:
+  - text: Please, enter your email id.
+  - text: Ok great, please enter your email id.
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
   - text: In what location?
   utter_default:
-  - text: i cannot understand
+  - text: default message
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
@@ -39,11 +113,8 @@ templates:
   - text: hey there! How may i help you
   - text: Hi, How can I help you!
   - text: Hey, How is it going. How May I help you Today
-actions:
-- action_search_restaurants
-- utter_ask_cuisine
-- utter_ask_howcanhelp
-- utter_ask_location
-- utter_default
-- utter_goodbye
-- utter_greet
+  utter_no_results_found:
+  - text: Sorry, No results found for your criteria. Would you like to search for
+      some other restaurants?
+  utter_email_sent:
+  - text: Sent      
