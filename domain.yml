@@ -10,6 +10,12 @@ actions:
 - utter_ask_emailid
 - utter_no_results_found
 - utter_email_sent
+- action_chklocation
+- verify_cuisine
+- verify_location
+- verify_budget
+- action_restaurant
+- action_send_email
 - actions.ActionSearchRestaurants
 - actions.VerifyLocation
 - actions.ActionSendEmail
@@ -33,22 +39,22 @@ entities:
 - emailid
 slots:
   budget_ok:
-    type: rasa_core.slots.BooleanSlot
+    type: bool
   budgetmax:
     initial_value: 10000.0
     max_value: 1.0
     min_value: 0.0
-    type: rasa_core.slots.FloatSlot
+    type: float
   budgetmin:
     initial_value: 0.0
     max_value: 1.0
     min_value: 0.0
-    type: rasa_core.slots.FloatSlot
+    type: float
   cuisine:
     type: text
   cuisine_ok:
     initial_value: false
-    type: rasa_core.slots.BooleanSlot
+    type: bool
   emailid:
     type: text
   location:
@@ -57,7 +63,7 @@ slots:
     type: text
   restaurant_exist:
     initial_value: false
-    type: rasa_core.slots.BooleanSlot
+    type: bool
 responses:
   utter_ask_budget:
   - buttons:
@@ -99,7 +105,7 @@ responses:
   utter_ask_location:
   - text: In what location?
   utter_default:
-  - text: i cannot understand
+  - text: default message
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye

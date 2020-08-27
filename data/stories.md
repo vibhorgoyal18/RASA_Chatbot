@@ -3,13 +3,14 @@
     - utter_greet
 * restaurant_search
     - utter_ask_location
-* restaurant_search{"location": "chennnai"}
-    - slot{"location": "chennnai"}
+* restaurant_search{"location": "benagaluru"}
+    - slot{"location": "benagaluru"}
     - action_chklocation
-* restaurant_search{"location": "chennai"}
-    - slot{"location": "chennai"}
+* restaurant_search{"location": "Bangalore"}
+    - slot{"location": "Bangalore"}
+	- action_chklocation
     - verify_location
-    - slot{"location": "chennai"}
+    - slot{"location": "Bangalore"}
     - slot{"location_ok": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
@@ -32,7 +33,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -89,8 +90,8 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryancodify@gmail.com"}
-    - slot{"emailid": "aryancodify@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -190,8 +191,8 @@
     - utter_ask_email
 * affirm
     - utter_ask_emailid
-* send_mail{"emailid": "aryancodify@gmail.com"}
-    - slot{"emailid": "aryancodify@gmail.com"}
+* send_mail{"emailid": "assignmentupgrad@gmail.com"}
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -231,7 +232,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -294,7 +295,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -330,7 +331,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -410,7 +411,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -494,7 +495,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 	
@@ -525,7 +526,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -565,7 +566,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -658,7 +659,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
@@ -700,7 +701,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
@@ -730,7 +731,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
@@ -823,7 +824,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -856,7 +857,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -901,7 +902,7 @@
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -932,7 +933,7 @@
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -1029,7 +1030,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
 * thankyou
     - utter_goodbye
@@ -1224,7 +1225,7 @@
 * affirm
     - utter_ask_emailid
 * send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com
+    - slot{"emailid": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 * goodbye
