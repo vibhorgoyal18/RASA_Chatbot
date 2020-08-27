@@ -10,6 +10,12 @@ actions:
 - utter_ask_emailid
 - utter_no_results_found
 - utter_email_sent
+- action_chklocation
+- verify_cuisine
+- verify_location
+- verify_budget
+- action_restaurant
+- action_send_email
 - actions.ActionSearchRestaurants
 - actions.VerifyLocation
 - actions.ActionSendEmail

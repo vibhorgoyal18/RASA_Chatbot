@@ -3,13 +3,14 @@
     - utter_greet
 * restaurant_search
     - utter_ask_location
-* restaurant_search{"location": "chennnai"}
-    - slot{"location": "chennnai"}
+* restaurant_search{"location": "benagaluru"}
+    - slot{"location": "benagaluru"}
     - action_chklocation
-* restaurant_search{"location": "chennai"}
-    - slot{"location": "chennai"}
+* restaurant_search{"location": "Bangalore"}
+    - slot{"location": "Bangalore"}
+	- action_chklocation
     - verify_location
-    - slot{"location": "chennai"}
+    - slot{"location": "Bangalore"}
     - slot{"location_ok": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
