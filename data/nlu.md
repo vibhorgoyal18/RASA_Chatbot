@@ -12,6 +12,7 @@
 - sounds really good
 - thanks
 - thank you
+- [bangalore]{"entity": "location", "value": "Bangalore"}
 
 ## intent:goodbye
 - bye
@@ -32,8 +33,6 @@
 - good morning
 - good evening
 - dear sir
-- hi
-- hello
 - hola
 
 ## intent:deny
@@ -71,7 +70,7 @@
 - show me [chinese](cuisine) restaurants over [300](budgetmin)
 - show me [chines](cuisine) restaurants over [700](budgetmin)
 - show me [chinese](cuisine) restaurants
-- show me [chines](cuisine:chinese) restaurants in the [New Delhi](location:Delhi)
+- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
 - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
@@ -84,22 +83,19 @@
 - [Italian](cuisine)
 - [Mexican](cuisine)
 - [American](cuisine)
-- [Chinese](cuisine:chinese)
+- [Chinese]{"entity": "cuisine", "value": "chinese"}
 - [chinese](cuisine)
 - [Lithuania](location)
 - Oh, sorry, in [Italy](location)
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
-- can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
+- can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurantin [bangalore](location)
 - [mumbai](location)
-- [Chinese](cuisine:chinese)
 - show me restaurants
-- [mumbai](location)
-- [Italian](cuisine)
 - please find me [chinese](cuisine) restaurant in [delhi](location)
 - can you find me a [chinese](cuisine) restaurant
 - [chandigarh](location)
@@ -108,208 +104,11 @@
 - please show me a few [chinese](cuisine) restaurants in [north](location)
 - less than [113](budgetmax)
 - more than [113](budgetmin)
-
-## synonym:hi
-- Hi
+- [Mexican](cuisine)
+- I’m looking out in [Delhi]{"entity": "location", "value": "New Delhi"} between [565](budgetmin) and [678](budgetmax)
 
 ## synonym:4
 - four
-
-## synonym:Delhi
-- New Delhi
-- delhi
-- Delli
-- Dilli
-
-## synonym:bangalore
-- Bengaluru
-
-## synonym:chinese
-- chines
-- Chinese
-- Chines
-
-## synonym:mid
-- moderate
-
-## synonym:vegetarian
-- veggie
-- vegg
-
-## synonym:low
-- lower
-- cheap
-- cheaper
-- <300
-- < 300
-- inexpensive
-- less than 300
-- Lesser than Rs. 300
-- Lesser than Rs.300
-- lesser than Rs. 300
-- lesser than Rs.300
-- Lesserthan Rs. 300
-- lesserthan Rs. 300
-- lesserthan Rs.300
-- cost under 300
-- Lesserthan Rs.300
-- Less than Rs. 300
-- Less than Rs.300
-- less than Rs. 300
-- less than Rs.300
-- Lessthan Rs. 300
-- lessthan Rs. 300
-- lessthan Rs.300
-- Lessthan Rs.300
-- Lesser than 300
-- lesser than 300
-- Lesserthan 300
-- lesserthan 300
-- Less than 300
-- less than 300
-- lessthan 300
-- Lessthan 300
-
-## synonym:medium
-- moderately
-- moderate
-- mid
-- in range of 300 to 700
-- 300 to 700
-- 300-700
-- Rs. 300 to 700
-- Rs.300 to 700
-- in range of 300 to 700
-- 300 to 700
-- 300-700
-- Rs. 300 to 700 
-- Rs.300 to 700
-
-## synonym:high
-- expensive
-- costly
-- More than 700
-- >700
-- >700
-- greater than 700
-- 700 or more
-- luxury
-- luxurious
-- More than 700
-- More than Rs.700
-- More than Rs. 700
-- more than 700
-- more than Rs.700
-- more than Rs. 700
-- Morethan 700
-- Morethan Rs.700
-- Morethan Rs. 700
-- morethan 700
-- morethan Rs.700
-- morethan Rs. 700
-
-## synonym:chinese
-- chines
-- Chinese
-- Chines
-
-## synonym:Mexican
-- mexica
-- taco
-- mex     
-- spanish
-- Mexicn
-- Mexican  
-- mxican 
-- mexican 
-
-## synonym:American
-- american         
-- america
-- american
-- americn
-- amrican
- 
-
-## synonym:Italian
-- italic
-- italia
-- italian
-- Italin
-- Itlian
-
-## synonym:North Indian
-- northindian
-- north indian
-- NorthIndian
-- North Indian
-- North indian
-- north Indian
-- north food
-- northie
-- indian
-- india
-- punjabi
-- punjab
-- gujarati
-- gujarat
-- bengali
-- bengal
-- kashmiri
-- kashmir
-
-## synonym:South Indian
-- SouthIndian
-- southindian
-- south food
-- southie
-- indian
-- india
-- andhra
-- telugu
-- kerala
-- karnataka
-- tamil
-- South Indian
-- South indian
-- south Indian
-- south indian
-
-## synonym:Bangalore
-- bengaluru
-- blore
-- blr
-- bengaluru
-- bangalore
-- Bangalur
-
-## synonym:Mumbai
-- bombay
-- mumbai
-- Bombai
-- Bombay
-
-## synonym:Hyderabad
-- secunderabad
-- hydrabad
-- Hyderabad
-- hyderbad
-- hyderabd
-
-## synonym:Kolkata
-- calcutta
-- Kolkata
-- Calcutta
-- Kolkatta
-- kolkata
-- Calcutta
-
-## synonym:New Delhi
-- newdelhi
-- delhi
-- New Delhi
-- Delli
-- Dilli
 
 ## synonym:Ahmedabad
 - Amdavad
@@ -319,36 +118,11 @@
 - Ahmeadbad
 - ahmedabad
 
-## synonym:Chennai
-- Madras 
-- chenai
-- chenni
-- madras 
-- chennai  
-	   
-## synonym:Pune
-- Poona
-- Pne
-- Puna
-- puna
-- pune
-
 ## synonym:Ajmer
 - Ajmr
 - Ajmer
 - ajmr
 - ajmer
-
-## synonym:agra
-- Agra
-
-
-## synonym:Amravati
-- Amaravati
-- Amrvati
-- Amravatti
-- Amaravati
-- amravati
 
 ## synonym:Aligarh
 - Allygurh & Koil
@@ -359,6 +133,17 @@
 - Aligarh
 - Aligadh
 
+## synonym:American
+- american
+- america
+- americn
+- amrican
+
+## synonym:Amravati
+- Amaravati
+- Amrvati
+- Amravatti
+- amravati
 
 ## synonym:Amritsar
 - Ambarsar
@@ -372,10 +157,12 @@
 - arangbad
 - aurangabd
 
-## synonym:asansol
-- asnsol
-- asansole
-- asansol
+## synonym:Bangalore
+- bengaluru
+- blore
+- blr
+- bangalore
+- Bangalur
 
 ## synonym:Bareilly
 - Bareilli
@@ -383,19 +170,6 @@
 - Bareili
 - barelly
 - bareilly
-
-## synonym:Bhopal
-- Bopal
-- Bhopa
-- Bhopl
-- bhopal
- 
-## synonym:Bhilai
-- Bhilai Nagar
-- Bilai
-- Bilai Nagar
-- bilainagar
-- bhilainagar
 
 ## synonym:Belgaum
 - Belgam
@@ -408,6 +182,18 @@
 - Belegaum
 - Belegam
 
+## synonym:Bhilai
+- Bilai
+- Bilai Nagar
+- bilainagar
+- bhilainagar
+
+## synonym:Bhopal
+- Bopal
+- Bhopa
+- Bhopl
+- bhopal
+
 ## synonym:Bhubaneswar
 - Bhuvaneswar
 - Bhubaneswara
@@ -419,34 +205,24 @@
 - Vijaypura
 - Bijpur
 - Bijapur
-- Bijapur
 
 ## synonym:Bokaro Steel City
 - Bokaro
 - Bokaro Steel City
-- Bokaro Steel City
 - bokaro Steel City
 
-## synonym:bhavnagar
-- bhavanagar
-- Bhavnagar
-- bhaavnagar
-
-## synonym:bhiwandi
-- bhiwaandi
-- biwandi
-- bhiwandi
+## synonym:Chennai
+- Madras
+- chenai
+- chenni
+- madras
+- chennai
 
 ## synonym:Coimbatore
 - Kovai
 - coimbatore
 - cbe
 - Coimbator
-
-## synonym:chandigarh
-- Chandigarh
-- Chandigadh
-- Chandigar
 
 ## synonym:Cuttack
 - Cuttck
@@ -455,49 +231,19 @@
 
 ## synonym:Dehradun
 - Dehra dun
-- Dehra	
+- Dehra
 - dehradun
 - Deharadun
 
-## synonym:dhanbad
-- Dhanabad
-- Dhanbd
-- Dhanbad
-
 ## synonym:Durg-Bhilai Nagar
-- Durg Nagar
 - Bhilai Nagar
+- Durg Nagar
 - Durg-Bhilai
-
-## synonym:durgapur
-- Duragapur
-- Durgapure
-- Durgapur
-
-## synonym:erode
-- Erode
-- Erode
-- Erode
-
-## synonym:faridabad
-- Faridabd
-- Fardabad
-- Faridabad
 
 ## synonym:Firozabad
 - Firozbad
 - Firzabad
 - Firozabad
-
-## synonym:ghaziabad
-- Gaziabad
-- Ghazibad
-- Ghaziabad
-
-## synonym:gorakhpur
-- Gorakpur
-- Gorkhpur
-- Gorakhpur
 
 ## synonym:Gulbarga
 - Kalaburagi
@@ -505,22 +251,17 @@
 - Gulbarg
 - Gulbarga
 
-## synonym:Gurgaon
-- Gurugram
-- Gurgao
-- Gurugaon
-- gurugaon
-
 ## synonym:Guntur
 - guntur
 - Guntr
 - Gantur
 - Guntur
 
-## synonym:gwalior
-- Gwaliar
-- Ghwaliar
-- Gwalior
+## synonym:Gurgaon
+- Gurugram
+- Gurgao
+- Gurugaon
+- gurugaon
 
 ## synonym:Guwahati
 - Gauhati
@@ -536,10 +277,19 @@
 - Hubli
 - hubli
 
-## synonym:indore
-- Indor
-- Indore
-- Indore
+## synonym:Hyderabad
+- secunderabad
+- hydrabad
+- Hyderabad
+- hyderbad
+- hyderabd
+
+## synonym:Italian
+- italic
+- italia
+- italian
+- Italin
+- Itlian
 
 ## synonym:Jabalpur
 - Jubbulpore
@@ -547,44 +297,17 @@
 - Jablpur
 - Jabalpur
 
-
-## synonym:jaipur
-- Jaipure
-- Jaypur
-- Jaipur
-
 ## synonym:Jalandhar
 - Jalandar
 - Jullundur
 - Jalandhr
 - Jalanadhar
-- Jalandar
 
-## synonym:jammu
-- Jammu
-- jammu
-- Jammu
-
-## synonym:jamnagar
-- Jamanagar
-- Jamnagr
-- Jamnagar
-
-## synonym:jamshedpur
-- jamshedpure
-- Jamshedpur
-- Jamshedpur
-
-## synonym:jhansi
-- Jansi
-- Jhanasi
-- Jhansi
-
-## synonym:jodhpur
-- Jodpur
-- Jodhpure
-- Jodhpur
-
+## synonym:Kakinada
+- Cocanada
+- Kakinda
+- Kakinad
+- Kakinada
 
 ## synonym:Kannur
 - Cannanore
@@ -604,22 +327,12 @@
 - cochin
 - kochi
 
-## synonym:Kottayam
-- Kotayam
-- Kottyam
-- Kottayam
-
-## synonym:kolhapur
-- Kolapur
-- Kohlapur
-- Kolhapur
-
-## synonym:Kakinada
-- Cocanada
-- Kakinda
-- Kakinad
-- Kakinada
-
+## synonym:Kolkata
+- calcutta
+- Kolkata
+- Calcutta
+- Kolkatta
+- kolkata
 
 ## synonym:Kollam
 - Quilon
@@ -633,41 +346,16 @@
 - Kota
 - kota
 
+## synonym:Kottayam
+- Kotayam
+- Kottyam
+- Kottayam
+
 ## synonym:Kozhikode
 - Calicut
 - Kozhikod
 - Kozhikode
 - kozhikode
-
-## synonym:kurnool
-- Kurnol
-- Koornool
-- Kurnool
-
-## synonym:lucknow
-- Lucknow
-- Lko
-- Luknow
-
-## synonym:ludhiana
-- Ludiana
-- Ludhiana
-- Ludhiana
-
-## synonym:madurai
-- Madurai
-- Madurai
-- Madurai
-
-## synonym:malappuram
-- Malapuram
-- Mallappuram
-- Malappuram
-
-## synonym:mathura
-- Matura
-- Mathura
-- Mathura
 
 ## synonym:Mangalore
 - Mangaluru
@@ -675,15 +363,21 @@
 - Manglore
 - Mangalore
 
-## synonym:meerut
-- Merut
-- Meerut
-- Meerut
+## synonym:Mexican
+- mexica
+- taco
+- mex
+- spanish
+- Mexicn
+- Mexican
+- mxican
+- mexican
 
-## synonym:moradabad
-- Muradabad
-- Moradbad
-- Moradabad
+## synonym:Mumbai
+- bombay
+- mumbai
+- Bombai
+- Bombay
 
 ## synonym:Mysore
 - Mysuru
@@ -691,30 +385,34 @@
 - Mysor
 - Mysure
 
-## synonym:nagpur
-- Nagpure
-- Nagpor
-- Nagpur
-
-## synonym:nanded
-- Nanded
-- Nanded
-- Nanded
-
-## synonym:nellore
-- Nellor
-- Nelore
-- Nellore
-
-
-## synonym:noida
-- greater Noida
-- G. Noida
-- Noida
-
 ## synonym:Nashik
 - Nasik
 - nashik
+
+## synonym:New Delhi
+- New Delhi
+- delhi
+- Delli
+- Dilli
+- newdelhi
+
+## synonym:North Indian
+- northindian
+- north indian
+- NorthIndian
+- North Indian
+- North indian
+- north Indian
+- north food
+- northie
+- punjabi
+- punjab
+- gujarati
+- gujarat
+- bengali
+- bengal
+- kashmiri
+- kashmir
 
 ## synonym:Palakkad
 - Palghat
@@ -727,34 +425,23 @@
 - Puducherri
 - Pondi
 
-## synonym:patna
-- Patna
-- patna
-- Patnaa
-
 ## synonym:Prayagraj
 - Allahabad
 - Illahabad
 - Prayag
 
-## synonym:raipur
-- Raipur
-
-## synonym:rajkot
-- Rjakot
-- Raajko
-- Rajkot
+## synonym:Pune
+- Poona
+- Pne
+- Puna
+- puna
+- pune
 
 ## synonym:Rajahmundry
 - Rajamahendravaram
 - Rajamundr
 - Rajhmundr
 - Rajmundry
-
-## synonym:ranchi
-- Rancih
-- Ranchi
-- Ranchi
 
 ## synonym:Rourkela
 - Ispat Nagar
@@ -763,40 +450,22 @@
 - Rorkela
 - Rourekla
 
-## synonym:salem
-- Selam
-- Selem
-- Salem
-
-## synonym:sangli
-- sangli
-- Sangil
-- Sangli
-
-## synonym:siliguri
-- Siligur
-- Siligudi
-- Silguri
-
-## synonym:solapur
-- Sholapur
-- Solpur
-- Solapur
-
-## synonym:srinagar
-- Srinagr
-- Sirinaga
-- Sirnagar
-
-## synonym:sultanpur
-- Sultanapur
-- Sulatanpur
-- Sultanpur
-
-## synonym:surat
-- Surat
-- Surat
-- Surat
+## synonym:South Indian
+- indian
+- india
+- SouthIndian
+- southindian
+- south food
+- southie
+- andhra
+- telugu
+- kerala
+- karnataka
+- tamil
+- South Indian
+- South indian
+- south Indian
+- south indian
 
 ## synonym:Thiruvananthapuram
 - Trivandrum
@@ -853,23 +522,7 @@
 - Banaras
 - Kashi
 - Varansi
-- Banaras
 - Varanasi
-
-## synonym:Visakhapatnam
-- Vizag
-- Waltair
-- Vizagapatam
-- Visakapatnam
-- Vishakhapatnam
-- Vishakapatnam
-
-## synonym:Vijayawada
-- Vijayavatika
-- Bezawada
-- Vijaywada
-- Vijayawada
-- Vijaiawada
 
 ## synonym:Vasai-Virar City
 - Vasai-Virar
@@ -883,12 +536,313 @@
 - Vasai City
 - Virar City
 
-      
+## synonym:Vijayawada
+- Vijayavatika
+- Bezawada
+- Vijaywada
+- Vijayawada
+- Vijaiawada
+
+## synonym:Visakhapatnam
+- Vizag
+- Waltair
+- Vizagapatam
+- Visakapatnam
+- Vishakhapatnam
+- Vishakapatnam
+
+## synonym:agra
+- Agra
+
+## synonym:asansol
+- asnsol
+- asansole
+- asansol
+
+## synonym:bangalore
+- Bengaluru
+
+## synonym:bhavnagar
+- bhavanagar
+- Bhavnagar
+- bhaavnagar
+
+## synonym:bhiwandi
+- bhiwaandi
+- biwandi
+- bhiwandi
+
+## synonym:chandigarh
+- Chandigarh
+- Chandigadh
+- Chandigar
+
+## synonym:chinese
+- chines
+- Chinese
+- Chines
+
+## synonym:dhanbad
+- Dhanabad
+- Dhanbd
+- Dhanbad
+
+## synonym:durgapur
+- Duragapur
+- Durgapure
+- Durgapur
+
+## synonym:erode
+- Erode
+
+## synonym:faridabad
+- Faridabd
+- Fardabad
+- Faridabad
+
+## synonym:ghaziabad
+- Gaziabad
+- Ghazibad
+- Ghaziabad
+
+## synonym:gorakhpur
+- Gorakpur
+- Gorkhpur
+- Gorakhpur
+
+## synonym:gwalior
+- Gwaliar
+- Ghwaliar
+- Gwalior
+
+## synonym:hi
+- Hi
+
+## synonym:high
+- expensive
+- costly
+- More than 700
+- >700
+- greater than 700
+- 700 or more
+- luxury
+- luxurious
+- More than Rs.700
+- More than Rs. 700
+- more than 700
+- more than Rs.700
+- more than Rs. 700
+- Morethan 700
+- Morethan Rs.700
+- Morethan Rs. 700
+- morethan 700
+- morethan Rs.700
+- morethan Rs. 700
+
+## synonym:indore
+- Indor
+- Indore
+
+## synonym:jaipur
+- Jaipure
+- Jaypur
+- Jaipur
+
+## synonym:jammu
+- Jammu
+- jammu
+
+## synonym:jamnagar
+- Jamanagar
+- Jamnagr
+- Jamnagar
+
+## synonym:jamshedpur
+- jamshedpure
+- Jamshedpur
+
+## synonym:jhansi
+- Jansi
+- Jhanasi
+- Jhansi
+
+## synonym:jodhpur
+- Jodpur
+- Jodhpure
+- Jodhpur
+
+## synonym:kolhapur
+- Kolapur
+- Kohlapur
+- Kolhapur
+
+## synonym:kurnool
+- Kurnol
+- Koornool
+- Kurnool
+
+## synonym:low
+- lower
+- cheap
+- cheaper
+- <300
+- < 300
+- inexpensive
+- less than 300
+- Lesser than Rs. 300
+- Lesser than Rs.300
+- lesser than Rs. 300
+- lesser than Rs.300
+- Lesserthan Rs. 300
+- lesserthan Rs. 300
+- lesserthan Rs.300
+- cost under 300
+- Lesserthan Rs.300
+- Less than Rs. 300
+- Less than Rs.300
+- less than Rs. 300
+- less than Rs.300
+- Lessthan Rs. 300
+- lessthan Rs. 300
+- lessthan Rs.300
+- Lessthan Rs.300
+- Lesser than 300
+- lesser than 300
+- Lesserthan 300
+- lesserthan 300
+- Less than 300
+- lessthan 300
+- Lessthan 300
+
+## synonym:lucknow
+- Lucknow
+- Lko
+- Luknow
+
+## synonym:ludhiana
+- Ludiana
+- Ludhiana
+
+## synonym:madurai
+- Madurai
+
+## synonym:malappuram
+- Malapuram
+- Mallappuram
+- Malappuram
+
+## synonym:mathura
+- Matura
+- Mathura
+
+## synonym:medium
+- moderate
+- moderately
+- mid
+- in range of 300 to 700
+- 300 to 700
+- 300-700
+- Rs. 300 to 700
+- Rs.300 to 700
+
+## synonym:meerut
+- Merut
+- Meerut
+
+## synonym:moradabad
+- Muradabad
+- Moradbad
+- Moradabad
+
+## synonym:nagpur
+- Nagpure
+- Nagpor
+- Nagpur
+
+## synonym:nanded
+- Nanded
+
+## synonym:nellore
+- Nellor
+- Nelore
+- Nellore
+
+## synonym:noida
+- greater Noida
+- G. Noida
+- Noida
+
+## synonym:patna
+- Patna
+- patna
+- Patnaa
+
+## synonym:raipur
+- Raipur
+
+## synonym:rajkot
+- Rjakot
+- Raajko
+- Rajkot
+
+## synonym:ranchi
+- Rancih
+- Ranchi
+
+## synonym:salem
+- Selam
+- Selem
+- Salem
+
+## synonym:sangli
+- sangli
+- Sangil
+- Sangli
+
+## synonym:siliguri
+- Siligur
+- Siligudi
+- Silguri
+
+## synonym:solapur
+- Sholapur
+- Solpur
+- Solapur
+
+## synonym:srinagar
+- Srinagr
+- Sirinaga
+- Sirnagar
+
+## synonym:sultanpur
+- Sultanapur
+- Sulatanpur
+- Sultanpur
+
+## synonym:surat
+- Surat
+
+## synonym:vegetarian
+- veggie
+- vegg
+
+## regex:email
+- ^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$
+
 ## regex:greet
 - hey[^\s]*
 
-## regex:pincode
-- [0-9]{6}
+## regex:greet_hello
+- hello[^\\s]*
+
+## regex:greet_hey
+- hey[^\\s]*
+
+## regex:greet_hi
+- hi[^\\s]*
+
+## regex:high
+- ^>[0-9]{3}$
 
 ## regex:low
 - ^<[0-9]{2,3}$
@@ -896,17 +850,5 @@
 ## regex:medium
 - ^[0-9]{3}-[0-9]{3}$
 
-## regex:high
-- ^>[0-9]{3}$
-
-## regex:greet_hey
-- hey[^\\s]*
-
-## regex:email
-- ^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$
-
-## regex:greet_hi
-- hi[^\\s]*
-
-## regex:greet_hello
-- hello[^\\s]*
+## regex:pincode
+- [0-9]{6}

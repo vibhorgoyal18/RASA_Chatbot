@@ -1,69 +1,42 @@
 actions:
-- utter_greet
-- utter_goodbye
-- utter_default
-- utter_ask_howcanhelp
-- utter_ask_location
-- utter_ask_cuisine
-- utter_ask_budget
-- utter_ask_email
-- utter_ask_emailid
-- utter_no_results_found
-- utter_email_sent
 - action_chklocation
-- verify_cuisine
-- verify_location
-- verify_budget
 - action_restaurant
 - action_send_email
+- actions.ActionCheckLocation
 - actions.ActionSearchRestaurants
-- actions.VerifyLocation
 - actions.ActionSendEmail
 - actions.VerifyBudget
 - actions.VerifyCuisine
-- actions.ActionCheckLocation
+- actions.VerifyLocation
+- utter_ask_budget
+- utter_ask_cuisine
+- utter_ask_email
+- utter_ask_emailid
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_email_sent
+- utter_goodbye
+- utter_greet
+- utter_no_results_found
+- verify_budget
+- verify_cuisine
+- verify_location
+entities:
+- budgetmax
+- budgetmin
+- cuisine
+- emailid
+- location
 intents:
-- greet
+- send_mail
 - affirm
+- restaurant_search
+- greet
 - deny
 - goodbye
 - thankyou
-- restaurant_search
-- send_mail
 - dont_send_email
-entities:
-- location
-- cuisine
-- budgetmin
-- budgetmax
-- emailid
-slots:
-  budget_ok:
-    type: bool
-  budgetmax:
-    initial_value: 10000.0
-    max_value: 1.0
-    min_value: 0.0
-    type: float
-  budgetmin:
-    initial_value: 0.0
-    max_value: 1.0
-    min_value: 0.0
-    type: float
-  cuisine:
-    type: text
-  cuisine_ok:
-    initial_value: false
-    type: bool
-  emailid:
-    type: text
-  location:
-    type: text
-  location_ok:
-    type: text
-  restaurant_exist:
-    initial_value: false
-    type: bool
 responses:
   utter_ask_budget:
   - buttons:
@@ -106,6 +79,8 @@ responses:
   - text: In what location?
   utter_default:
   - text: default message
+  utter_email_sent:
+  - text: Sent
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
@@ -116,5 +91,33 @@ responses:
   utter_no_results_found:
   - text: Sorry, No results found for your criteria. Would you like to search for
       some other restaurants?
-  utter_email_sent:
-  - text: Sent      
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
+slots:
+  budget_ok:
+    type: bool
+  budgetmax:
+    initial_value: 10000.0
+    max_value: 1.0
+    min_value: 0.0
+    type: float
+  budgetmin:
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: 0.0
+    type: float
+  cuisine:
+    type: text
+  cuisine_ok:
+    initial_value: false
+    type: bool
+  emailid:
+    type: text
+  location:
+    type: text
+  location_ok:
+    type: text
+  restaurant_exist:
+    initial_value: false
+    type: bool

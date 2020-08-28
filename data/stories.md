@@ -1230,3 +1230,37 @@
     - utter_goodbye
 * goodbye
 	- action_restart
+## interactive_story_1
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* affirm{"location": "Bangalore"}
+    - slot{"location": "Bangalore"}
+    - action_chklocation
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "Mexican"}
+    - slot{"cuisine": "Mexican"}
+    - verify_cuisine
+    - utter_ask_budget
+* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
+    - slot{"budgetmax": "700"}
+    - slot{"budgetmin": "300"}
+    - verify_budget
+    - action_restaurant
+    - utter_ask_email
+* send_mail
+    - action_send_email
+* affirm
+    - utter_goodbye
+    - action_restart
+
+## interactive_story_2
+* restaurant_search{"location": "New Delhi", "budgetmin": "565", "budgetmax": "678"}
+    - slot{"budgetmax": "678"}
+    - slot{"budgetmin": "565"}
+    - slot{"location": "New Delhi"}
+
+## interactive_story_3
+* greet
+    - utter_greet
