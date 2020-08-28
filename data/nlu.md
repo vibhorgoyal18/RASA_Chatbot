@@ -63,12 +63,12 @@
 - I’m hungry. Looking out for some good [mexiacn](cuisine) restaurants
 - I’m hungry. Looking out for some good [north indian](cuisine) restaurants
 - I’m hungry. Looking out for some good [chinese](cuisine) restaurants
-- I’m hungry. Looking out in [delhi](location) under [556](budgetmax)
-- I’m hungry. Looking out in [delhi](location) over [565](budgetmin)
-- I’m hungry. Looking out in [Delhi](location) within [678](budgetmax)
-- I’m looking out in [Delhi](location) between [565](budgetmin) and [678](budgetmax)
-- show me [chinese](cuisine) restaurants over [300](budgetmin)
-- show me [chines](cuisine) restaurants over [700](budgetmin)
+- I’m hungry. Looking out in [delhi](location) under [556](budget_max)
+- I’m hungry. Looking out in [delhi](location) over [565](budget_min)
+- I’m hungry. Looking out in [Delhi](location) within [678](budget_max)
+- I’m looking out in [Delhi](location) between [565](budget_min) and [678](budget_max)
+- show me [chinese](cuisine) restaurants over [300](budget_min)
+- show me [chines](cuisine) restaurants over [700](budget_min)
 - show me [chinese](cuisine) restaurants
 - show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
@@ -102,10 +102,10 @@
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - please show me a few [chinese](cuisine) restaurants in [north](location)
-- less than [113](budgetmax)
-- more than [113](budgetmin)
+- less than [113](budget_max)
+- more than [113](budget_min)
 - [Mexican](cuisine)
-- I’m looking out in [Delhi]{"entity": "location", "value": "New Delhi"} between [565](budgetmin) and [678](budgetmax)
+- I’m looking out in [Delhi]{"entity": "location", "value": "New Delhi"} between [565](budget_min) and [678](budget_max)
 
 ## synonym:4
 - four

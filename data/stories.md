@@ -5,10 +5,10 @@
     - utter_ask_location
 * restaurant_search{"location": "benagaluru"}
     - slot{"location": "benagaluru"}
-    - action_chklocation
+    - action_chk_location
 * restaurant_search{"location": "Bangalore"}
     - slot{"location": "Bangalore"}
-	- action_chklocation
+	- action_chk_location
     - verify_location
     - slot{"location": "Bangalore"}
     - slot{"location_ok": true}
@@ -19,21 +19,21 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chennai"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -44,7 +44,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -52,11 +52,11 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
@@ -70,7 +70,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -78,20 +78,20 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -103,7 +103,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -111,12 +111,12 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
@@ -132,7 +132,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -140,11 +140,11 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
@@ -165,7 +165,7 @@
     - utter_ask_location
 * restaurant_search{"location": "allahabad"}
     - slot{"location": "allahabad"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "allahabad"}
     - slot{"location_ok": true}
@@ -179,20 +179,20 @@
     - slot{"cuisine": "italian"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "1000"}
-    - slot{"budgetmax": "1000"}
+* restaurant_search{"budget_max": "1000"}
+    - slot{"budget_max": "1000"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 1000}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 1000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "allahabad"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -208,7 +208,7 @@
     - utter_ask_location
 * restaurant_search{"location": "allahabad"}
     - slot{"location": "allahabad"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "allahabad"}
     - slot{"location_ok": true}
@@ -219,20 +219,20 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "allahabad"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -243,7 +243,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "mumbai"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "mumbai"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -251,12 +251,12 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "mumbai"}
@@ -277,25 +277,25 @@
     - utter_ask_location
 * restaurant_search{"location": "coimbatore"}
     - slot{"location": "coimbatore"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "coimbatore"}
     - slot{"location_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "coimbatore"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -307,7 +307,7 @@
     - utter_ask_location
 * restaurant_search{"location": "Kochi"}
     - slot{"location": "Kochi"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "Kochi"}
     - slot{"location_ok": true}
@@ -318,20 +318,20 @@
     - slot{"cuisine": "american"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "700"}
-    - slot{"budgetmax": "700"}
+* restaurant_search{"budget_max": "700"}
+    - slot{"budget_max": "700"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "Kochi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -344,7 +344,7 @@
     - utter_ask_location
 * restaurant_search{"location": "majuli"}
     - slot{"location": "majuli"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -367,11 +367,11 @@
     - slot{"cuisine": "south indian"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "vijayawada"}
@@ -384,12 +384,12 @@
 ## Generated Story -12
 * greet
     - utter_greet
-* restaurant_search{"cuisine": "mexican", "location": "chennai", "budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"cuisine": "mexican", "location": "chennai", "budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "chennai"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chennai"}
     - slot{"location_ok": true}
@@ -397,21 +397,21 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chennai"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -423,7 +423,7 @@
     - utter_ask_location
 * restaurant_search{"location": "lanka"}
     - slot{"location": "lanka"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -452,12 +452,12 @@
     - slot{"cuisine": "north indian"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "lucknow"}
@@ -470,14 +470,14 @@
 ## Generated Story 14
 * greet
     - utter_greet
-* restaurant_search{"cuisine": "american", "budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"cuisine": "american", "budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - slot{"cuisine": "american"}
     - utter_ask_location
 * restaurant_search{"location": "jaipur"}
     - slot{"location": "jaipur"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "jaipur"}
     - slot{"location_ok": true}
@@ -485,27 +485,27 @@
     - slot{"cuisine": "american"}
     - slot{"cuisine_ok": true}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "jaipur"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 	
 ## Generated Story -15
 * greet
     - utter_greet
-* restaurant_search{"location": "raipur", "budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"location": "raipur", "budget_max": "300"}
+    - slot{"budget_max": "300"}
     - slot{"location": "raipur"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "raipur"}
     - slot{"location_ok": true}
@@ -516,17 +516,17 @@
     - slot{"cuisine": "south indian"}
     - slot{"cuisine_ok": true}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "raipur"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -536,7 +536,7 @@
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -553,20 +553,20 @@
     - slot{"cuisine": "american"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "delhi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -578,7 +578,7 @@
     - utter_ask_location
 * restaurant_search{"location": "mumbai"}
     - slot{"location": "mumbai"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -595,11 +595,11 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "mumbai"}
@@ -616,7 +616,7 @@
     - utter_ask_location
 * restaurant_search{"location": "mumbai"}
     - slot{"location": "mumbai"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "mumbai"}
     - slot{"location_ok": true}
@@ -645,21 +645,21 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "mumbai"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
@@ -670,7 +670,7 @@
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -681,39 +681,39 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "500"}
-    - slot{"budgetmax": "500"}
+* restaurant_search{"budget_max": "500"}
+    - slot{"budget_max": "500"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": false}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "delhi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
 ## Generated Story -20
 * greet
     - utter_greet
-* restaurant_search{"cuisine": "mexican", "location": "delhi", "budgetmin": "300", "budgetmax": "800"}
-    - slot{"budgetmax": "800"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"cuisine": "mexican", "location": "delhi", "budget_min": "300", "budget_max": "800"}
+    - slot{"budget_max": "800"}
+    - slot{"budget_min": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "delhi"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "delhi"}
     - slot{"location_ok": true}
@@ -721,17 +721,17 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 800}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 800}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "delhi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 	- action_restart
 
@@ -742,7 +742,7 @@
     - utter_ask_location
 * restaurant_search{"location": "ajmer"}
     - slot{"location": "ajmer"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "ajmer"}
     - slot{"location_ok": true}
@@ -753,11 +753,11 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "ajmer"}
@@ -768,11 +768,11 @@
 ## Generated Story -22
 * greet
     - utter_greet
-* restaurant_search{"cuisine": "mexican", "location": "ajmer", "budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"cuisine": "mexican", "location": "ajmer", "budget_max": "300"}
+    - slot{"budget_max": "300"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "ajmer"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "ajmer"}
     - slot{"location_ok": true}
@@ -780,12 +780,12 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "ajmer"}
@@ -800,7 +800,7 @@
     - utter_ask_location
 * restaurant_search{"location": "chandigarh"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -811,20 +811,20 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -835,7 +835,7 @@
 * restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chandigarh"}
     - slot{"location_ok": true}
@@ -843,21 +843,21 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chandigarh"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 	- action_restart
@@ -867,7 +867,7 @@
     - utter_greet
 * restaurant_search{"cuisine": "north indian"}
     - slot{"cuisine": "north indian"}
-    - action_chklocation
+    - action_chk_location
     - verify_cuisine
     - slot{"cuisine": "north indian"}
     - slot{"cuisine_ok": true}
@@ -890,19 +890,19 @@
     - slot{"location": "ranchi"}
     - slot{"location_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
-    - slot{"budgetmin": 300}
-    - slot{"budgetmax": 700}
+    - slot{"budget_min": 300}
+    - slot{"budget_max": 700}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "ranchi"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -917,23 +917,23 @@
     - utter_ask_location
 * restaurant_search{"location": "dehradun"}
     - slot{"location": "dehradun"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "dehradun"}
     - slot{"location_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "dehradun"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 * goodbye
     - utter_goodbye
@@ -945,7 +945,7 @@
 * restaurant_search{"cuisine": "mughlai", "location": "asansol"}
     - slot{"cuisine": "mughlai"}
     - slot{"location": "asansol"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "asansol"}
     - slot{"location_ok": true}
@@ -971,18 +971,18 @@
     - slot{"cuisine": "italian"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "500"}
-    - slot{"budgetmax": "500"}
+* restaurant_search{"budget_max": "500"}
+    - slot{"budget_max": "500"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": false}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}    
     - action_restaurant
     - slot{"location": "asansol"}
@@ -999,14 +999,14 @@
     - utter_ask_location
 * restaurant_search{"location": "bhubhaneshwar"}
     - slot{"location": "bhubhaneshwar"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
     - utter_ask_location
 * restaurant_search{"location": "amravati"}
     - slot{"location": "amravati"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "amravati"}
     - slot{"location_ok": true}
@@ -1017,20 +1017,20 @@
     - slot{"cuisine": "american"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "amravati"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
 * thankyou
     - utter_goodbye
@@ -1043,7 +1043,7 @@
     - utter_ask_location
 * restaurant_search{"location": "chennai"}
     - slot{"location": "chennai"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "chennai"}
     - slot{"location_ok": true}
@@ -1054,11 +1054,11 @@
     - slot{"cuisine": "north indian"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "chennai"}
@@ -1081,16 +1081,16 @@
 * 
 * restaurant_search{"location": "warangal"}
     - slot{"location": "warangal"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "warangal"}
     - slot{"location_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "warangal"}
@@ -1105,7 +1105,7 @@
     - utter_greet
 * restaurant_search{"location": "colombo"}
     - slot{"location": "colombo"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": null}
     - slot{"location_ok": false}
@@ -1128,11 +1128,11 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "Bangalore"}
@@ -1147,7 +1147,7 @@
     - utter_greet
 * restaurant_search{"location": "Hubli-Dharwad"}
     - slot{"location": "Hubli-Dharwad"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "Hubli-Dharwad"}
     - slot{"location_ok": true}
@@ -1158,11 +1158,11 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmax": "300"}
-    - slot{"budgetmax": "300"}
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
     - verify_budget
-    - slot{"budgetmin": 0}
-    - slot{"budgetmax": 300}
+    - slot{"budget_min": 0}
+    - slot{"budget_max": 300}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "Hubli-Dharwad"}
@@ -1176,7 +1176,7 @@
 * restaurant_search{"cuisine": "mexican", "location": "Hubli-Dharwad"}
     - slot{"cuisine": "mexican"}
     - slot{"location": "Hubli-Dharwad"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "Hubli-Dharwad"}
     - slot{"location_ok": true}
@@ -1184,11 +1184,11 @@
     - slot{"cuisine": "mexican"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "Hubli-Dharwad"}
@@ -1201,7 +1201,7 @@
     - utter_greet
 * restaurant_search{"location": "guwahati"}
     - slot{"location": "guwahati"}
-    - action_chklocation
+    - action_chk_location
     - verify_location
     - slot{"location": "guwahati"}
     - slot{"location_ok": true}
@@ -1212,20 +1212,20 @@
     - slot{"cuisine": "chinese"}
     - slot{"cuisine_ok": true}
     - utter_ask_budget
-* restaurant_search{"budgetmin": "700"}
-    - slot{"budgetmin": "700"}
+* restaurant_search{"budget_min": "700"}
+    - slot{"budget_min": "700"}
     - verify_budget
-    - slot{"budgetmin": 700}
-    - slot{"budgetmax": 10000}
+    - slot{"budget_min": 700}
+    - slot{"budget_max": 10000}
     - slot{"budget_ok": true}
     - action_restaurant
     - slot{"location": "guwahati"}
     - slot{"restaurant_exist": true}
     - utter_ask_email
 * affirm
-    - utter_ask_emailid
-* send_mail{"emailid": "assignmentupgrad@gmail.com"}
-    - slot{"emailid": "assignmentupgrad@gmail.com"}
+    - utter_ask_email_id
+* send_mail{"email_id": "assignmentupgrad@gmail.com"}
+    - slot{"email_id": "assignmentupgrad@gmail.com"}
     - action_send_email
     - utter_goodbye
 * goodbye
@@ -1237,15 +1237,15 @@
     - utter_ask_location
 * affirm{"location": "Bangalore"}
     - slot{"location": "Bangalore"}
-    - action_chklocation
+    - action_chk_location
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Mexican"}
     - slot{"cuisine": "Mexican"}
     - verify_cuisine
     - utter_ask_budget
-* restaurant_search{"budgetmin": "300", "budgetmax": "700"}
-    - slot{"budgetmax": "700"}
-    - slot{"budgetmin": "300"}
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
     - verify_budget
     - action_restaurant
     - utter_ask_email
@@ -1256,9 +1256,9 @@
     - action_restart
 
 ## interactive_story_2
-* restaurant_search{"location": "New Delhi", "budgetmin": "565", "budgetmax": "678"}
-    - slot{"budgetmax": "678"}
-    - slot{"budgetmin": "565"}
+* restaurant_search{"location": "New Delhi", "budget_min": "565", "budget_max": "678"}
+    - slot{"budget_max": "678"}
+    - slot{"budget_min": "565"}
     - slot{"location": "New Delhi"}
 
 ## interactive_story_3

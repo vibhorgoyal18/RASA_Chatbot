@@ -1,5 +1,5 @@
 actions:
-- action_chklocation
+- action_chk_location
 - action_restaurant
 - action_send_email
 - actions.ActionCheckLocation
@@ -11,8 +11,8 @@ actions:
 - utter_ask_budget
 - utter_ask_cuisine
 - utter_ask_email
-- utter_ask_emailid
-- utter_ask_howcanhelp
+- utter_ask_email_id
+- utter_ask_how_can_help
 - utter_ask_location
 - utter_default
 - utter_email_sent
@@ -23,10 +23,10 @@ actions:
 - verify_cuisine
 - verify_location
 entities:
-- budgetmax
-- budgetmin
+- budget_max
+- budget_min
 - cuisine
-- emailid
+- email_id
 - location
 intents:
 - send_mail
@@ -40,11 +40,11 @@ intents:
 responses:
   utter_ask_budget:
   - buttons:
-    - payload: /restaurant_search{"budgetmin":"0","budgetmax":"300"}
+    - payload: /restaurant_search{"budget_min":"0","budget_max":"300"}
       title: Less than Rs. 300
-    - payload: /restaurant_search{"budgetmin":"300","budgetmax":"700"}
+    - payload: /restaurant_search{"budget_min":"300","budget_max":"700"}
       title: Rs. 300 to 700
-    - payload: /restaurant_search{"budgetmin":"700","budgetmax":"10000"}
+    - payload: /restaurant_search{"budget_min":"700","budget_max":"10000"}
       title: More than 700
     text: What price range are you looking for?
   utter_ask_cuisine:
@@ -70,7 +70,7 @@ responses:
     - payload: /dont_send_email
       title: No
     text: Should I send you details of all the restaurants on email?
-  utter_ask_emailid:
+  utter_ask_email_id:
   - text: Please, enter your email id.
   - text: Ok great, please enter your email id.
   utter_ask_howcanhelp:
@@ -97,12 +97,12 @@ session_config:
 slots:
   budget_ok:
     type: bool
-  budgetmax:
+  budget_max:
     initial_value: 10000.0
     max_value: 1.0
     min_value: 0.0
     type: float
-  budgetmin:
+  budget_min:
     initial_value: 0.0
     max_value: 1.0
     min_value: 0.0
@@ -112,7 +112,7 @@ slots:
   cuisine_ok:
     initial_value: false
     type: bool
-  emailid:
+  email_id:
     type: text
   location:
     type: text
