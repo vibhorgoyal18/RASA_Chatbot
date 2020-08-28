@@ -1,27 +1,18 @@
 actions:
 - action_chk_location
-- action_restaurant
+- action_search_restaurants
 - action_send_email
-- actions.ActionCheckLocation
-- actions.ActionSearchRestaurants
-- actions.ActionSendEmail
-- actions.VerifyBudget
-- actions.VerifyCuisine
-- actions.VerifyLocation
 - utter_ask_budget
 - utter_ask_cuisine
 - utter_ask_email
 - utter_ask_email_id
-- utter_ask_how_can_help
 - utter_ask_location
 - utter_default
 - utter_email_sent
 - utter_goodbye
 - utter_greet
 - utter_no_results_found
-- verify_budget
-- verify_cuisine
-- verify_location
+- action_verify_cuisine
 entities:
 - budget_max
 - budget_min
@@ -78,16 +69,17 @@ responses:
   utter_ask_location:
   - text: In what location?
   utter_default:
-  - text: default message
+  - text: Sorry! I do not understand. Could you please be more clear?
   utter_email_sent:
   - text: Sent
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
   utter_greet:
-  - text: hey there! How may i help you
-  - text: Hi, How can I help you!
-  - text: Hey, How is it going. How May I help you Today
+  - text: Hey there! How may I help you?
+  - text: Hi, How can I help you?
+  - text: Hey, How is it going? How may I help you today?
+  - text: Hi! What would you like me to search for you?
   utter_no_results_found:
   - text: Sorry, No results found for your criteria. Would you like to search for
       some other restaurants?

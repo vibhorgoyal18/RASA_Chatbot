@@ -39,6 +39,7 @@ class ActionSearchRestaurants(Action):
         results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 80)
         data = json.loads(results)
         d = data['restaurants']
+        print(d)
         restaurants = pd.DataFrame()
         if data['results_found'] == 0:
             response = "Sorry! We are not able to find any restaurant for your preferences. " \
@@ -101,8 +102,8 @@ class SendEmail(Action):
         counter = 1
         for index, row in restaurants.head(10).iterrows():
             restaurants_list = restaurants_list + str(counter) + '. ' + str(row["restaurant_name"]) + " in " + \
-                              row['restaurant_address'] + " has been rated " + \
-                              row['restaurant_rating'] + "\n"
+                               row['restaurant_address'] + " has been rated " + \
+                               row['restaurant_rating'] + "\n"
 
         s = smtplib.SMTP(host='smtp.gmail.com', port=587)
         s.starttls()
@@ -126,5 +127,17 @@ This is an auto generated email. Please dont reply to this email.
         msg.attach(MIMEText(message, 'plain'))
 
         s.send_message(msg)
-        print('sent')
         del msg
+
+
+class ActionVerifyCuisine(Action):
+
+    def name(self):
+        return 'action_verify_cuisine'
+
+    def run(self, dispatcher, tracker, domain):
+        cuisine = tracker.get_slot('cuisine')
+        if cuisine.lower() not in ['chinese', 'south indian', 'american', 'north indian', 'italian', 'mexican']:
+            dispatcher.utter_message("Sorry, we do not deliver "+cuisine+" food. Please select some other cuisine.")
+            return [SlotSet('cuisine', None)]
+        return [SlotSet('cuisine', cuisine)]
