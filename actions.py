@@ -26,8 +26,8 @@ class ActionSearchRestaurants(Action):
         response = 'Showing you top rated restaurants:\n'
         config = {"user_key": zomato_key}
         zomato = zomatopy.initialize_app(config)
-        budget_min = tracker.get_slot('budgetmin')
-        budget_max = tracker.get_slot('budgetmax')
+        budget_min = tracker.get_slot('budget_min')
+        budget_max = tracker.get_slot('budget_max')
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
         location_detail = zomato.get_location(loc, 1)
@@ -102,8 +102,8 @@ class SendEmail(Action):
         counter = 1
         for index, row in restaurants.head(10).iterrows():
             restaurants_list = restaurants_list + str(counter) + '. ' + str(row["restaurant_name"]) + " in " + \
-                               row['restaurant_address'] + " has been rated " + \
-                               row['restaurant_rating'] + "\n"
+                               str(row['restaurant_address']) + " has been rated " + \
+                               str(row['restaurant_rating']) + "\n"
 
         s = smtplib.SMTP(host='smtp.gmail.com', port=587)
         s.starttls()
