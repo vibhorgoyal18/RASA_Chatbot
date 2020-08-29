@@ -129,8 +129,10 @@
 - can you suggest some good restaurants in [kolkota](location)
 - can you suggest some good restaurants in [kolkata]{"entity": "location", "value": "Kolkata"}
 - bengaluru[]{"entity": "location", "value": "bangalore"}
-- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
 - <300[]{"entity": "budget_max", "value": "300"}
+- looking out for some [italian]{"entity": "cuisine", "value": "Italian"} restaurants in [ghazipur](location)
+- show me some in [Hyderabad](location)
+- [assignmentupgrad@gmail.com](email_id)
 
 ## synonym:4
 - four

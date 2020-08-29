@@ -21,10 +21,10 @@ entities:
 - email_id
 - location
 intents:
-- greet
-- deny
 - restaurant_search
+- greet
 - affirm
+- deny
 - send_mail
 - goodbye
 - thankyou
@@ -33,7 +33,7 @@ responses:
   utter_ask_budget:
   - buttons:
     - payload: /restaurant_search{"budget_min":"0","budget_max":"300"}
-      title: Less than Rs. 300
+      title: Lesser than Rs. 300
     - payload: /restaurant_search{"budget_min":"300","budget_max":"700"}
       title: Rs. 300 to 700
     - payload: /restaurant_search{"budget_min":"700","budget_max":"10000"}
@@ -78,7 +78,7 @@ responses:
   - text: Sent
   - text: Sent. Bon Appetit!
   utter_goodbye:
-  - text: goodbye :(
+  - text: Okay. Bon Appetit!
   - text: Bye-bye
   utter_greet:
   - text: Hey there! How may I help you?

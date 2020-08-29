@@ -22,6 +22,7 @@ class ActionSearchRestaurants(Action):
 
     def run(self, dispatcher, tracker, domain):
 
+        count = 0
         global restaurants
         response = 'Showing you top rated restaurants:\n'
         config = {"user_key": zomato_key}
@@ -37,28 +38,30 @@ class ActionSearchRestaurants(Action):
         cuisines_dict = {'chinese': 25, 'south indian': 85, 'american': 1, 'north indian': 50, 'italian': 55,
                          'mexican': 73}
         results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 80)
+        response="Showing you top rated restaurants:"+"\n"
         data = json.loads(results)
-        d = data['restaurants']
-        print(d)
-        restaurants = pd.DataFrame()
+        # Sort the results according to the restaurant's rating
+        d_budget_rating_sorted = sorted(data['restaurants'], key=lambda x: x['restaurant']['user_rating']['aggregate_rating'], reverse=True)
+        print(data)
         if data['results_found'] == 0:
             response = "Sorry! We are not able to find any restaurant for your preferences. " \
                        "Please search for some other preferences."
-        else:
-            restaurants = pd.DataFrame([{'restaurant_name': x['restaurant']['name'],
-                                         'restaurant_rating': x['restaurant']['user_rating']['aggregate_rating'],
-                                         'restaurant_address': x['restaurant']['location']['address'],
-                                         'average_cost_for_two': x['restaurant']['average_cost_for_two']}
-                                        for x in d])
-            restaurants = restaurants[
-                restaurants['average_cost_for_two'] >= budget_min & restaurants['average_cost_for_two'] <= budget_max]
-            restaurants = restaurants.sort_values(['restaurant_rating'], ascending=False)
-            counter = 1
-            for index, row in restaurants.head(5).iterrows():
-                response = response + str(counter) + '. ' + str(row["restaurant_name"]) + " in " + \
-                           row['restaurant_address'] + " has been rated " + \
-                           row['restaurant_rating'] + "\n"
-        dispatcher.utter_message(response)
+        else:           
+            for restaurant in d_budget_rating_sorted:
+                #Getting Top 10 restaurants for chatbot response
+                if((restaurant['restaurant']['average_cost_for_two'] >= int(budget_min)) and (restaurant['restaurant']['average_cost_for_two'] <= int(budget_max)) and (count < 10)):
+                    response=response+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+ " has been rated "+ restaurant['restaurant']['user_rating']['aggregate_rating']+"."
+                    response=response+" And the average price for two people is: "+ str(restaurant['restaurant']['average_cost_for_two'])+"\n"
+                    count = count + 1           
+                if(count==5):
+                    dispatcher.utter_message(response)
+        if(count<5 and count>0):
+            dispatcher.utter_message(response)
+        if(count==0):
+            response = "Sorry, No results found for your criteria. Would you like to search for some other restaurants?"
+            dispatcher.utter_message(response)
+        
+        restaurants = d_budget_rating_sorted[:10]
 
 
 class ActionCheckLocation(Action):
@@ -100,11 +103,9 @@ class SendEmail(Action):
         email = tracker.get_slot('email_id')
         restaurants_list = ''
         counter = 1
-        for index, row in restaurants.head(10).iterrows():
-            restaurants_list = restaurants_list + str(counter) + '. ' + str(row["restaurant_name"]) + " in " + \
-                               str(row['restaurant_address']) + " has been rated " + \
-                               str(row['restaurant_rating']) + "\n"
-
+        for restaurant in restaurants:
+            restaurants_list = restaurants_list + str(counter) + '. ' + str(restaurant['restaurant']['name']) + " in "+ str(restaurant['restaurant']['location']['address'])+" has been rated " + str(restaurant['restaurant']['user_rating']['aggregate_rating']) + "\n" +"\n"
+            counter = counter + 1
         s = smtplib.SMTP(host='smtp.gmail.com', port=587)
         s.starttls()
         s.login('assignmentupgrad@gmail.com', 'Upgrad@123')

@@ -16,8 +16,8 @@
     - slot{"budget_min": "300"}
     - action_search_restaurants
     - utter_email_conf
-* restaurant_search{"email_id": "assignmentupgrad@gmail.com"}
-    - slot{"email_id": "assignmentupgrad@gmail.com"}
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
     - action_send_email
     - utter_email_sent
 
@@ -40,8 +40,8 @@
     - slot{"budget_min": "700"}
     - action_search_restaurants
     - utter_email_conf
-* restaurant_search{"email_id": "assignmentupgrad@gmail.com"}
-    - slot{"email_id": "assignmentupgrad@gmail.com"}
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
     - action_send_email
     - utter_email_sent
 
@@ -65,8 +65,8 @@
     - action_search_restaurants
     - utter_email_conf
 * affirm
-* restaurant_search{"email_id": "assignmentupgrad@gmail.com"}
-    - slot{"email_id": "assignmentupgrad@gmail.com"}
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
     - action_send_email
     - utter_email_sent
 
@@ -94,8 +94,9 @@
     - utter_email_conf
 * affirm
     - utter_ask_email_id
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
     - action_send_email
-* restaurant_search
     - utter_email_sent
 
 ## interactive_story_5
@@ -113,3 +114,71 @@
     - utter_email_conf
 * deny
     - utter_goodbye
+
+## interactive_story_6
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "bangalore"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "bangalore"}
+    - action_chk_location
+    - slot{"location": "bangalore"}
+    - utter_ask_budget
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
+    - action_search_restaurants
+    - utter_email_conf
+* affirm
+    - utter_ask_email_id
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
+    - action_send_email
+    - utter_email_sent
+
+## interactive_story_7
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_chk_location
+    - slot{"location": "chandigarh"}
+    - utter_ask_budget
+* restaurant_search{"budget_max": "300"}
+    - slot{"budget_max": "300"}
+    - action_search_restaurants
+    - utter_email_conf
+* affirm
+    - utter_ask_email_id
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
+    - action_send_email
+    - utter_email_sent
+
+## interactive_story_8
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "Italian", "location": "ghazipur"}
+    - slot{"cuisine": "Italian"}
+    - slot{"location": "ghazipur"}
+    - action_chk_location
+    - slot{"location": null}
+* restaurant_search{"location": "Hyderabad"}
+    - slot{"location": "Hyderabad"}
+    - action_chk_location
+    - slot{"location": "Hyderabad"}
+    - utter_ask_budget
+* restaurant_search{"budget_min": "300", "budget_max": "700"}
+    - slot{"budget_max": "700"}
+    - slot{"budget_min": "300"}
+    - action_search_restaurants
+    - utter_email_conf
+* affirm
+    - utter_ask_email_id
+* restaurant_search{"email_id": "chebroluharika@gmail.com"}
+    - slot{"email_id": "chebroluharika@gmail.com"}
+    - action_send_email
+    - utter_email_sent
+
+
