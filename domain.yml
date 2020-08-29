@@ -2,17 +2,18 @@ actions:
 - action_chk_location
 - action_search_restaurants
 - action_send_email
+- action_verify_cuisine
 - utter_ask_budget
 - utter_ask_cuisine
 - utter_ask_email
 - utter_ask_email_id
 - utter_ask_location
 - utter_default
+- utter_email_conf
 - utter_email_sent
 - utter_goodbye
 - utter_greet
 - utter_no_results_found
-- action_verify_cuisine
 entities:
 - budget_max
 - budget_min
@@ -20,11 +21,11 @@ entities:
 - email_id
 - location
 intents:
-- send_mail
-- affirm
-- restaurant_search
 - greet
 - deny
+- restaurant_search
+- affirm
+- send_mail
 - goodbye
 - thankyou
 - dont_send_email
@@ -64,14 +65,18 @@ responses:
   utter_ask_email_id:
   - text: Please, enter your email id.
   - text: Ok great, please enter your email id.
+  - text: To what email id should I send it to?
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
   - text: In what location?
   utter_default:
   - text: Sorry! I do not understand. Could you please be more clear?
+  utter_email_conf:
+  - text: Should I send you details of all the restaurants on email?
   utter_email_sent:
   - text: Sent
+  - text: Sent. Bon Appetit!
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
@@ -87,8 +92,6 @@ session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 0
 slots:
-  budget_ok:
-    type: bool
   budget_max:
     initial_value: 10000.0
     max_value: 1.0
@@ -99,6 +102,8 @@ slots:
     max_value: 1.0
     min_value: 0.0
     type: float
+  budget_ok:
+    type: bool
   cuisine:
     type: text
   cuisine_ok:

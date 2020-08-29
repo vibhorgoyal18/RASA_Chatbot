@@ -12,7 +12,7 @@
 - sounds really good
 - thanks
 - thank you
-- [bangalore]{"entity": "location", "value": "Bangalore"}
+- yes. Please
 
 ## intent:goodbye
 - bye
@@ -34,6 +34,10 @@
 - good evening
 - dear sir
 - hola
+- Hola
+- Hey
+- Hello!
+- Hi
 
 ## intent:deny
 - nope
@@ -41,6 +45,8 @@
 - No, thanks
 - Never mind
 - Don't bother
+- no,thanks
+- no. thanks
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -104,8 +110,27 @@
 - please show me a few [chinese](cuisine) restaurants in [north](location)
 - less than [113](budget_max)
 - more than [113](budget_min)
-- [Mexican](cuisine)
 - I’m looking out in [Delhi]{"entity": "location", "value": "New Delhi"} between [565](budget_min) and [678](budget_max)
+- I'm hungry. Looking out for some good restaurants
+- I will prefer [North Indian](cuisine)
+- yes, please send it to assignmentupgrad@gmail.com[]{"entity": "email_id", "value": "assignmentupgrad@gmail.com"}
+- Can you suggest some good restaurants in [Rishikesh](location)
+- Okay. Show me some in [Allahabad](location)
+- I'll prefer [chines]{"entity": "cuisine", "value": "chinese"}
+- >700[]{"entity": "budget_min", "value": "700"}
+- yes, please send it to [assignmentupgrad@gmail.com](email_id)
+- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
+- in [mubaim](location)
+- in [Mumbai](location)
+- [assignmentupgrad@gmail.com](email_id)
+- 300-700 range[]{"entity": "budget_min", "value": "300"}[]{"entity": "budget_max", "value": "700"}
+- yes. Please send it to [assignmentupgrad@gmail.com](email_id)
+- Okay. Show me some in [Allahabad]{"entity": "location", "value": "Prayagraj"}
+- can you suggest some good restaurants in [kolkota](location)
+- can you suggest some good restaurants in [kolkata]{"entity": "location", "value": "Kolkata"}
+- bengaluru[]{"entity": "location", "value": "bangalore"}
+- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
+- <300[]{"entity": "budget_max", "value": "300"}
 
 ## synonym:4
 - four
@@ -158,10 +183,9 @@
 - aurangabd
 
 ## synonym:Bangalore
-- bengaluru
+- bangalore
 - blore
 - blr
-- bangalore
 - Bangalur
 
 ## synonym:Bareilly
@@ -328,11 +352,11 @@
 - kochi
 
 ## synonym:Kolkata
+- kolkata
 - calcutta
 - Kolkata
 - Calcutta
 - Kolkatta
-- kolkata
 
 ## synonym:Kollam
 - Quilon
@@ -391,6 +415,7 @@
 
 ## synonym:New Delhi
 - New Delhi
+- Delhi
 - delhi
 - Delli
 - Dilli
@@ -560,6 +585,7 @@
 - asansol
 
 ## synonym:bangalore
+- bengaluru
 - Bengaluru
 
 ## synonym:bhavnagar
