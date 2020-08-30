@@ -7,7 +7,6 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-import pandas as pd
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 
@@ -38,29 +37,33 @@ class ActionSearchRestaurants(Action):
         cuisines_dict = {'chinese': 25, 'south indian': 85, 'american': 1, 'north indian': 50, 'italian': 55,
                          'mexican': 73}
         results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 80)
-        response="Showing you top rated restaurants:"+"\n"
+        response = "Showing you top rated restaurants:" + "\n"
         data = json.loads(results)
         # Sort the results according to the restaurant's rating
-        d_budget_rating_sorted = sorted(data['restaurants'], key=lambda x: x['restaurant']['user_rating']['aggregate_rating'], reverse=True)
-        print(data)
+        d_budget_rating_sorted = sorted(data['restaurants'],
+                                        key=lambda x: x['restaurant']['user_rating']['aggregate_rating'], reverse=True)
         if data['results_found'] == 0:
             response = "Sorry! We are not able to find any restaurant for your preferences. " \
                        "Please search for some other preferences."
-        else:           
+        else:
             for restaurant in d_budget_rating_sorted:
-                #Getting Top 10 restaurants for chatbot response
-                if((restaurant['restaurant']['average_cost_for_two'] >= int(budget_min)) and (restaurant['restaurant']['average_cost_for_two'] <= int(budget_max)) and (count < 10)):
-                    response=response+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+ " has been rated "+ restaurant['restaurant']['user_rating']['aggregate_rating']+"."
-                    response=response+" And the average price for two people is: "+ str(restaurant['restaurant']['average_cost_for_two'])+"\n"
-                    count = count + 1           
-                if(count==5):
+                # Getting Top 10 restaurants for chatbot response
+                if ((restaurant['restaurant']['average_cost_for_two'] >= int(budget_min)) and (
+                        restaurant['restaurant']['average_cost_for_two'] <= int(budget_max)) and (count < 10)):
+                    response = response + restaurant['restaurant']['name'] + " in " + \
+                               restaurant['restaurant']['location']['address'] + " has been rated " + \
+                               restaurant['restaurant']['user_rating']['aggregate_rating'] + "."
+                    response = response + " And the average price for two people is: " + str(
+                        restaurant['restaurant']['average_cost_for_two']) + "\n"
+                    count = count + 1
+                if (count == 5):
                     dispatcher.utter_message(response)
-        if(count<5 and count>0):
+        if (count < 5 and count > 0):
             dispatcher.utter_message(response)
-        if(count==0):
+        if (count == 0):
             response = "Sorry, No results found for your criteria. Would you like to search for some other restaurants?"
             dispatcher.utter_message(response)
-        
+
         restaurants = d_budget_rating_sorted[:10]
 
 
@@ -87,10 +90,12 @@ class ActionCheckLocation(Action):
                   'Ujjain', 'Bijapur', 'Vadodara', 'Varanasi', 'Vasai-Virar City', 'Vijayawada']
 
         cities_lower = [x.lower() for x in cities]
-
-        if loc.lower() not in cities_lower:
-            dispatcher.utter_message("Sorry, we don’t operate in this city. Can you please specify some other location")
-            return [SlotSet('location', None)]
+        if loc:
+            if loc.lower() not in cities_lower:
+                dispatcher.utter_message("Sorry, we don’t operate in this city. Can you please specify some other location")
+                return [SlotSet('location', None)]
+        else:
+            dispatcher.utter_message("Sorry, we did not got the city you searched for. Please try again.")
         return [SlotSet('location', loc)]
 
 
@@ -104,7 +109,10 @@ class SendEmail(Action):
         restaurants_list = ''
         counter = 1
         for restaurant in restaurants:
-            restaurants_list = restaurants_list + str(counter) + '. ' + str(restaurant['restaurant']['name']) + " in "+ str(restaurant['restaurant']['location']['address'])+" has been rated " + str(restaurant['restaurant']['user_rating']['aggregate_rating']) + "\n" +"\n"
+            restaurants_list = restaurants_list + str(counter) + '. ' + str(
+                restaurant['restaurant']['name']) + " in " + str(
+                restaurant['restaurant']['location']['address']) + " has been rated " + str(
+                restaurant['restaurant']['user_rating']['aggregate_rating']) + "\n" + "\n"
             counter = counter + 1
         s = smtplib.SMTP(host='smtp.gmail.com', port=587)
         s.starttls()
@@ -139,6 +147,6 @@ class ActionVerifyCuisine(Action):
     def run(self, dispatcher, tracker, domain):
         cuisine = tracker.get_slot('cuisine')
         if cuisine.lower() not in ['chinese', 'south indian', 'american', 'north indian', 'italian', 'mexican']:
-            dispatcher.utter_message("Sorry, we do not deliver "+cuisine+" food. Please select some other cuisine.")
+            dispatcher.utter_message("Sorry, we do not deliver " + cuisine + " food. Please select some other cuisine.")
             return [SlotSet('cuisine', None)]
         return [SlotSet('cuisine', cuisine)]

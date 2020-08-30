@@ -13,6 +13,7 @@
 - thanks
 - thank you
 - yes. Please
+- sure
 
 ## intent:goodbye
 - bye
@@ -38,6 +39,7 @@
 - Hey
 - Hello!
 - Hi
+- Hello
 
 ## intent:deny
 - nope
@@ -47,6 +49,7 @@
 - Don't bother
 - no,thanks
 - no. thanks
+- no thanks
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -132,10 +135,47 @@
 - <300[]{"entity": "budget_max", "value": "300"}
 - looking out for some [italian]{"entity": "cuisine", "value": "Italian"} restaurants in [ghazipur](location)
 - show me some in [Hyderabad](location)
-- [assignmentupgrad@gmail.com](email_id)
+- I am looking for restaurants in [aligarh](location)
+- Between [200](budget_min) and [500](budget_max)
+- I’m hungry. Looking out for some good restaurants
+- [aligarh]{"entity": "location", "value": "Aligarh"}
+- I’ll prefer [chines]{"entity": "cuisine", "value": "chinese"}
+- [>70]{"entity": "budget_min", "value": "700"}0
+- I’m hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
+- I am looking for restraunt in [lucknow](location)
+- [bengaluru]{"entity": "location", "value": "Search Results"}
+- [bengaluru]{"entity": "location", "value": "Bangalore"}
+- I'll prefer [american]{"entity": "cuisine", "value": "American"}
+- [300](budget_min)-[700](budget_max) range
+- [bombay]{"entity": "location", "value": "Mumbai"}
+- I'll have [south indian]{"entity": "cuisine", "value": "South Indian"}
+- [400](budget-min)-[600](budget_max)
+- >[700](budget_min)
+- Anything available in [Allahbad](location)?
+- Anything available in [Allahabad]{"entity": "location", "value": "Prayagraj"}?
+- shown me for [italian]{"entity": "cuisine", "value": "Italian"}
+- greater than [700](budget_min)
+- Can you suggest some good restaurants in [kolkata]{"entity": "location", "value": "Kolkata"}
+- [american]{"entity": "cuisine", "value": "American"}
+- <[300](budget_max)
+- [north indian]{"entity": "cuisine", "value": "North Indian"}
+- Can you suggest some good restaurants in [gurgaon](location)?
+- <[500](budget_max)
+- [bengaluru]{"entity": "location", "value": "Bangalore"}
+- [Mexican](cuisine)
+
+## intent:send_mail
+- [goyal1992.vibhor@gmail.com](email_id)
+- yes. Please send it to [goyal1992.vibhor@gmail.com](email_id)
+- yes, please send it to [goyal1992.vibhor@gmail.com](email_id)
+- send it to [goyal1809.vibhor@gmail.com](email_id)
+- can you send it on [goyal1992.vibhor@gmail.com](email_id)
 
 ## synonym:4
 - four
+
+## synonym:700
+- >70
 
 ## synonym:Ahmedabad
 - Amdavad
@@ -152,6 +192,7 @@
 - ajmer
 
 ## synonym:Aligarh
+- aligarh
 - Allygurh & Koil
 - Koil
 - Allygurh
@@ -311,9 +352,9 @@
 - hyderabd
 
 ## synonym:Italian
+- italian
 - italic
 - italia
-- italian
 - Italin
 - Itlian
 
@@ -424,8 +465,8 @@
 - newdelhi
 
 ## synonym:North Indian
-- northindian
 - north indian
+- northindian
 - NorthIndian
 - North Indian
 - North indian
@@ -478,6 +519,7 @@
 - Rourekla
 
 ## synonym:South Indian
+- south indian
 - indian
 - india
 - SouthIndian
@@ -492,7 +534,6 @@
 - South Indian
 - South indian
 - south Indian
-- south indian
 
 ## synonym:Thiruvananthapuram
 - Trivandrum

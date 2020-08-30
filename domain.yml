@@ -15,16 +15,17 @@ actions:
 - utter_greet
 - utter_no_results_found
 entities:
+- budget-min
 - budget_max
 - budget_min
 - cuisine
 - email_id
 - location
 intents:
-- restaurant_search
 - greet
-- affirm
 - deny
+- restaurant_search
+- affirm
 - send_mail
 - goodbye
 - thankyou
